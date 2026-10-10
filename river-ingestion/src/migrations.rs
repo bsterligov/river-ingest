@@ -3,15 +3,15 @@ use anyhow::Result;
 const MIGRATIONS: &[(&str, &str)] = &[
     (
         "V001__create_logs",
-        include_str!("../../../infra/migrations/clickhouse/V001__create_logs.sql"),
+        include_str!("../migrations/clickhouse/V001__create_logs.sql"),
     ),
     (
         "V002__create_traces",
-        include_str!("../../../infra/migrations/clickhouse/V002__create_traces.sql"),
+        include_str!("../migrations/clickhouse/V002__create_traces.sql"),
     ),
     (
         "V003__alter_logs_timestamp",
-        include_str!("../../../infra/migrations/clickhouse/V003__alter_logs_timestamp.sql"),
+        include_str!("../migrations/clickhouse/V003__alter_logs_timestamp.sql"),
     ),
 ];
 

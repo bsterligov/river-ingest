@@ -1,7 +1,8 @@
 FROM rust:1.95-slim-trixie AS builder
 WORKDIR /app
 COPY Cargo.toml Cargo.lock ./
-COPY src ./src
+COPY river-sidecar ./river-sidecar
+COPY river-ingestion ./river-ingestion
 RUN cargo build --release --package river-sidecar
 
 FROM debian:trixie-slim
